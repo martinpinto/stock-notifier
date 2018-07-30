@@ -1,0 +1,27 @@
+{
+  "name": "stock-notifier",
+  "version": "0.0.1",
+  "description": "Notifies you of important news for your stocks.",
+  "main": "start.js",
+  "scripts": {
+    "start": "npm run build && node dist/src/start.js",
+    "build": "rimraf dist && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files --source-maps",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "stock",
+    "notifier",
+    "news"
+  ],
+  "author": "Martin Pinto-Bazurco Mendieta",
+  "license": "MIT",
+  "dependencies": {
+    "fast-csv": "^2.4.1",
+    "toml-require": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "10.5.4",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
